@@ -15,7 +15,7 @@ Spotify非中文歌词翻译 Surge和Loon需要>=iOS15 (仓库地址: https://gi
 如果软件已经加载过Spotify解锁脚本(https://github.com/app2smile/rules#spotify),可不配置MITM域名
 1.Surge:
 [MITM]
-#hostname = %APPEND% spclient.wg.spotify.com
+hostname = %APPEND% spclient.wg.spotify.com
 [Script]
 # 修改下方argument中的appid和securityKey,填入自己的appid和密钥
 spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js,argument=appid=20250428002344843&securityKey=8fDJXYjmGrgxA7XcctLI
